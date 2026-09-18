@@ -7,11 +7,12 @@ import {
   MapPin,
   CheckCircle2,
   Star,
-  ArrowRight,
   Sparkles,
   Shield,
   Zap,
 } from 'lucide-react';
+
+import Cjenik from './components/Cjenik';
 
 
 function App() {
@@ -65,26 +66,35 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
               <Sparkles className="mr-2" />
               Klahel
             </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#services" className="text-white hover:text-blue-200">
-                Usluge
-              </a>
-              <a href="#work" className="text-white hover:text-blue-200">
-                Posao
-              </a>
-              <a href="#process" className="text-white hover:text-blue-200">
-                Proces
-              </a>
-              {/*
+            <div className="flex items-center space-x-6">
+              <div className="hidden md:flex space-x-8">
+                <a href="#services" className="text-white hover:text-blue-200">
+                  Usluge
+                </a>
+                <a href="#work" className="text-white hover:text-blue-200">
+                  Posao
+                </a>
+                <a href="#process" className="text-white hover:text-blue-200">
+                  Proces
+                </a>
+                {/*
+                <a
+                  href="#testimonials"
+                  className="text-white hover:text-blue-200"
+                >
+                  Preporuke
+                </a>
+                */}
+                <a href="#contact" className="text-white hover:text-blue-200">
+                  Kontakti
+                </a>
+              </div>
+              {/* Poveznica na cjenik je uvijek vidljiva, i na mobilnim uredajima */}
               <a
-                href="#testimonials"
-                className="text-white hover:text-blue-200"
+                href="#cjenik"
+                className="bg-white text-blue-700 px-5 py-2 rounded-full font-semibold hover:bg-blue-50 transition duration-300"
               >
-                Preporuke
-              </a>
-              */}
-              <a href="#contact" className="text-white hover:text-blue-200">
-                Kontakti
+                Cjenik
               </a>
             </div>
           </div>
@@ -144,6 +154,9 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
           </div>
         </div>
       </section>
+
+      {/* Cjenik Section */}
+      <Cjenik />
 
       {/* Our Work Section */}
       <section id="work" className="py-20 bg-white">
@@ -394,7 +407,14 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
               <span className="text-xl font-bold">KLAHEL</span>
             </div>
             <div className="text-center md:text-right">
-              <p>© 2025 KLAHEL. All rights reserved.</p>
+              {/* Poveznica na objavljene cjenike (Nar. nov., br. 101/26) */}
+              <a
+                href="#cjenik"
+                className="inline-block mb-2 text-blue-300 hover:text-white underline"
+              >
+                Cjenik usluga i arhiva objavljenih cjenika
+              </a>
+              <p>© 2025 KLAHEL. Sva prava pridržana.</p>
             </div>
           </div>
         </div>
