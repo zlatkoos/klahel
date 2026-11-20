@@ -407,7 +407,7 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
               <span className="text-xl font-bold">KLAHEL</span>
             </div>
             <div className="text-center md:text-right">
-              {/* Poveznica na objavljene cjenike (Nar. nov., br. 101/26) */}
+              {/* Poveznica na objavljene cjenike (Nar. nov., br. 132/26) */}
               <a
                 href="#cjenik"
                 className="inline-block mb-2 text-blue-300 hover:text-white underline"
